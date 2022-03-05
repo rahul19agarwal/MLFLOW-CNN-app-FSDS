@@ -1,2 +1,5 @@
 numpy
 tqdm
+
+##local package
+-e . # << uncomment this to install from setup.py
