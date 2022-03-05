@@ -4,6 +4,8 @@ import logging
 import time
 import pandas as pd
 import json
+from zipfile import ZipFile
+
 
 def read_yaml(path_to_yaml: str) -> dict:
     with open(path_to_yaml) as yaml_file:
@@ -22,3 +24,9 @@ def save_json(path: str, data: dict) -> None:
         json.dump(data, f, indent=4)
 
     logging.info(f"json file saved at: {path}")
+
+def unzipe_file(source:str,destination:str) -> None:
+    logging.info("Extraction started.......")
+    with ZipFile(source, 'r') as zip_f:
+        zip_f.extractall(destination)
+    logging.info(f"extracted {source} to destination")

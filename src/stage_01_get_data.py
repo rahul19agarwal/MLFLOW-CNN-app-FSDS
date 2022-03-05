@@ -3,9 +3,11 @@ import os
 import shutil
 from tqdm import tqdm
 import logging
-from src.utils.common import read_yaml, create_directories
+from src.utils.common import read_yaml, create_directories,unzipe_file
 import random
 import urllib.request as req
+from zipfile import ZipFile
+
 
 STAGE = "get data stage" ## <<< change stage name
 
@@ -22,6 +24,7 @@ def main(config_path, params_path):
     config = read_yaml(config_path)
     url = config['data']['url']
     local_dir = config['data']['local_dir']
+    unzip_data_location = config['data']['unzip_data_location']
     create_directories([local_dir])
     data_file = config['data']['data_file_name']
     data_file_path = os.path.join(local_dir,data_file)
@@ -33,8 +36,10 @@ def main(config_path, params_path):
     else:
         logging.info('Data is already downloaded.............')
 
-
-
+    ##extract zip file
+    logging.info('Zip file extraction began')
+    create_directories([unzip_data_location])
+    unzipe_file(source=data_file_path,destination=unzip_data_location)
     print (config,'configconfig')
     #params = read_yaml(params_path)
     pass
