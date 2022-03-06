@@ -4,6 +4,7 @@ import shutil
 from tqdm import tqdm
 import logging
 from src.utils.common import read_yaml, create_directories,unzipe_file
+from src.utils.data_mgmt import image_validation
 import random
 import urllib.request as req
 from zipfile import ZipFile
@@ -41,6 +42,12 @@ def main(config_path, params_path):
     create_directories([unzip_data_location])
     unzipe_file(source=data_file_path,destination=unzip_data_location)
     print (config,'configconfig')
+
+    ##validation of data
+    image_validation(config)
+
+
+
     #params = read_yaml(params_path)
     pass
 

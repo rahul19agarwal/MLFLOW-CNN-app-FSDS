@@ -1,0 +1,125 @@
+[2022-03-06 19:41:12,670: INFO: stage_02_base_model_creation]: 
+********************
+[2022-03-06 19:41:12,671: INFO: stage_02_base_model_creation]: >>>>> stage BASE MODEL CREATION started <<<<<
+[2022-03-06 19:41:12,713: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-03-06 19:41:14,008: INFO: stage_02_base_model_creation]: base model summary:
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 178, 178, 32)      896       
+                                                                 
+ max_pooling2d (MaxPooling2D  (None, 89, 89, 32)       0         
+ )                                                               
+                                                                 
+ conv2d_1 (Conv2D)           (None, 87, 87, 32)        9248      
+                                                                 
+ max_pooling2d_1 (MaxPooling  (None, 43, 43, 32)       0         
+ 2D)                                                             
+                                                                 
+ flatten (Flatten)           (None, 59168)             0         
+                                                                 
+ dense (Dense)               (None, 8)                 473352    
+                                                                 
+ dense_1 (Dense)             (None, 2)                 18        
+                                                                 
+=================================================================
+Total params: 483,514
+Trainable params: 483,514
+Non-trainable params: 0
+_________________________________________________________________
+ 
+[2022-03-06 19:41:14,015: ERROR: stage_02_base_model_creation]: 'model'
+Traceback (most recent call last):
+  File "src/stage_02_base_model_creation.py", line 60, in <module>
+    main(config_path=parsed_args.config)
+  File "src/stage_02_base_model_creation.py", line 45, in main
+    path_to_model = os.path.join(config['data']['local_dir'],config['data']['model'])
+KeyError: 'model'
+[2022-03-06 19:47:34,891: INFO: stage_02_base_model_creation]: 
+********************
+[2022-03-06 19:47:34,923: INFO: stage_02_base_model_creation]: >>>>> stage BASE MODEL CREATION started <<<<<
+[2022-03-06 19:47:34,949: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-03-06 19:47:36,860: INFO: stage_02_base_model_creation]: base model summary:
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 178, 178, 32)      896       
+                                                                 
+ max_pooling2d (MaxPooling2D  (None, 89, 89, 32)       0         
+ )                                                               
+                                                                 
+ conv2d_1 (Conv2D)           (None, 87, 87, 32)        9248      
+                                                                 
+ max_pooling2d_1 (MaxPooling  (None, 43, 43, 32)       0         
+ 2D)                                                             
+                                                                 
+ flatten (Flatten)           (None, 59168)             0         
+                                                                 
+ dense (Dense)               (None, 8)                 473352    
+                                                                 
+ dense_1 (Dense)             (None, 2)                 18        
+                                                                 
+=================================================================
+Total params: 483,514
+Trainable params: 483,514
+Non-trainable params: 0
+_________________________________________________________________
+ 
+[2022-03-06 19:47:36,905: INFO: common]: created directory at: d
+[2022-03-06 19:47:36,905: INFO: common]: created directory at: a
+[2022-03-06 19:47:36,906: INFO: common]: created directory at: t
+[2022-03-06 19:47:36,906: INFO: common]: created directory at: a
+[2022-03-06 19:47:36,906: INFO: common]: created directory at: /
+[2022-03-06 19:47:36,906: INFO: common]: created directory at: m
+[2022-03-06 19:47:36,906: INFO: common]: created directory at: o
+[2022-03-06 19:47:36,907: INFO: common]: created directory at: d
+[2022-03-06 19:47:36,907: INFO: common]: created directory at: e
+[2022-03-06 19:47:36,907: INFO: common]: created directory at: l
+[2022-03-06 19:47:37,341: INFO: stage_02_base_model_creation]: >>>>> stage BASE MODEL CREATION completed!<<<<<
+
+[2022-03-06 19:54:17,760: INFO: stage_02_base_model_creation]: 
+********************
+[2022-03-06 19:54:17,848: INFO: stage_02_base_model_creation]: >>>>> stage BASE MODEL CREATION started <<<<<
+[2022-03-06 19:54:17,871: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-03-06 19:54:19,580: INFO: stage_02_base_model_creation]: base model summary:
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 178, 178, 32)      896       
+                                                                 
+ max_pooling2d (MaxPooling2D  (None, 89, 89, 32)       0         
+ )                                                               
+                                                                 
+ conv2d_1 (Conv2D)           (None, 87, 87, 32)        9248      
+                                                                 
+ max_pooling2d_1 (MaxPooling  (None, 43, 43, 32)       0         
+ 2D)                                                             
+                                                                 
+ flatten (Flatten)           (None, 59168)             0         
+                                                                 
+ dense (Dense)               (None, 8)                 473352    
+                                                                 
+ dense_1 (Dense)             (None, 2)                 18        
+                                                                 
+=================================================================
+Total params: 483,514
+Trainable params: 483,514
+Non-trainable params: 0
+_________________________________________________________________
+ 
+[2022-03-06 19:54:19,586: INFO: common]: created directory at: d
+[2022-03-06 19:54:19,586: INFO: common]: created directory at: a
+[2022-03-06 19:54:19,586: INFO: common]: created directory at: t
+[2022-03-06 19:54:19,586: INFO: common]: created directory at: a
+[2022-03-06 19:54:19,586: INFO: common]: created directory at: /
+[2022-03-06 19:54:19,586: INFO: common]: created directory at: m
+[2022-03-06 19:54:19,586: INFO: common]: created directory at: o
+[2022-03-06 19:54:19,587: INFO: common]: created directory at: d
+[2022-03-06 19:54:19,587: INFO: common]: created directory at: e
+[2022-03-06 19:54:19,587: INFO: common]: created directory at: l
+[2022-03-06 19:54:19,685: INFO: stage_02_base_model_creation]: model is saved at : data/model/init_model.h5
+[2022-03-06 19:54:19,686: INFO: stage_02_base_model_creation]: >>>>> stage BASE MODEL CREATION completed!<<<<<
+
